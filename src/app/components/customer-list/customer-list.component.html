@@ -1,0 +1,13 @@
+<div class="m-3 p-3 h-full rounded-sm border-solid border-black shadow-lg">
+    <h2 class="text-center text-2xl font-semibold">Customers List</h2>
+    <ul class="mt-10">
+        <li class="flex justify-between" *ngFor="let item of customerList">
+            <div>
+                <button class="bg-orange-700 px-2 py-1 text-white rounded-sm  hover:bg-slate-orange" type="button">Select</button>
+            </div>
+            <div>
+                {{item.name + " " + item.lastName + " | " + item.identification + " | " + item.mail}}            
+            </div>                                                    
+        </li>
+    </ul>
+</div>

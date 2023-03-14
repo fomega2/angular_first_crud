@@ -1,0 +1,28 @@
+<div class="grid grid-cols-2">
+    <div class="m-3 p-3 h-full rounded-sm border-solid border-black shadow-lg">
+        <h2 class="text-center text-2xl font-semibold">Customers</h2>
+        <form [formGroup]="customerForm">
+            <div class="mt-4">
+                <span class="font-semibold block">Name</span>
+                <input id="customerName" formControlName="customerName" class="rounded-md bg-white border border-solid border-black p-1 w-full" placeholder="Name of the customer"/>
+            </div>
+            <div class="mt-4">
+                <span class="font-semibold block">Lastname</span>
+                <input id="customerLastName" formControlName="customerLastName" class="rounded-md bg-white border border-solid border-black p-1 w-full" placeholder="Lastname of the customer"/>
+            </div>
+            <div class="mt-4">
+                <span class="font-semibold block">Mail</span>
+                <input id="customerEmail" formControlName="customerEmail" class="rounded-md bg-white border border-solid border-black p-1 w-full" placeholder="mail@example.com"/>
+            </div>
+            <div class="mt-4">
+                <span class="font-semibold block">DNI</span>
+                <input id="customerDNI" formControlName="customerDNI" type="number" minlength="1000000000" class="rounded-md bg-white border border-solid border-black p-1 w-full" placeholder="Id number like 117220736"/>
+            </div>        
+            <div class="mt-4 grid grid-cols-2 gap-x-3">
+                <button class="bg-slate-700 py-2 text-white rounded-sm  hover:bg-slate-600" (click)="Submit(false)">Add</button>
+                <button class="bg-neutral-700 py-2 text-white rounded-sm  hover:bg-neutral-600" type="button">Clean</button>      
+            </div>
+        </form>
+    </div>
+    <app-customer-list [customerList]="customerList"></app-customer-list>
+</div>
